@@ -1,7 +1,6 @@
-Feature: Fill Practice Form on DemoQA
+Feature: Practice Form Automation
 
-  Scenario: User fills out the practice form successfully
+  Scenario: Fill form using multiple data from Excel
     Given User navigates to the Practice Form page
-    When User fills in the form with valid data
-    And User submits the form
-    Then The form should be submitted successfully
+    When User fills and submits the form for each data
+    Then Each form submission should show success message

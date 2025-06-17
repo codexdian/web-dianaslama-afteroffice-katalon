@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>verify_sukses_submit</name>
+   <name>button_Close</name>
    <tag></tag>
-   <elementGuidId>27133f06-6b45-4a25-8b8c-81bd70ad6b15</elementGuidId>
+   <elementGuidId>0a86c169-3fcc-4643-bd6d-449f7ce15887</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;example-modal-sizes-title-lg&quot;]</value>
+         <value>//*[@id=&quot;closeLargeModal&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
