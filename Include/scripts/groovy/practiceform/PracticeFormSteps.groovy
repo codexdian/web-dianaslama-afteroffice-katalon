@@ -37,7 +37,7 @@ class PracticeFormSteps {
 
 			WebUI.setText(findTestObject('Object Repository/Form/input_firstName'), firstName)
 			WebUI.setText(findTestObject('Object Repository/Form/input_lastName'), lastName)
-			
+
 			WebUI.scrollToElement(findTestObject('Object Repository/Form/input_userEmail'), 10)
 			WebUI.waitForElementVisible(findTestObject('Object Repository/Form/input_userEmail'), 10)
 			WebUI.setText(findTestObject('Object Repository/Form/input_userEmail'), email)
@@ -71,12 +71,8 @@ class PracticeFormSteps {
 
 			WebUI.click(findTestObject('Object Repository/Form/button_Submit'))
 
-			// ✅ Verifikasi langsung setelah submit
 			WebUI.verifyElementText(findTestObject('Object Repository/Form/verify_sukses_submit'), 'Thanks for submitting the form')
 
-			// ✅ Tutup modal success sebelum lanjut ke data berikutnya
-			//				WebUI.click(findTestObject('Object Repository/Form/button_Close'))
-			//				WebUI.navigateToUrl('https://demoqa.com/automation-practice-form')
 		}
 	}
 

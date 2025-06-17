@@ -45,42 +45,39 @@ import cucumber.api.java.en.When
 
 
 class PracticeFormNegativeSteps {
-	
-		@Given("User navigates to the Practice Form page for negative tc")
-		def openForm() {
-			WebUI.openBrowser('')
-			WebUI.navigateToUrl('https://demoqa.com/automation-practice-form')
-			WebUI.maximizeWindow()
-			WebUI.scrollToElement(findTestObject('Object Repository/Form/input_firstName'), 10)
-			WebUI.waitForElementVisible(findTestObject('Object Repository/Form/input_firstName'), 10)
-			WebUI.takeScreenshot()
-		}
-	
-		@When("User submits form with required fields empty")
-		def submitEmptyForm() {
-			WebUI.takeScreenshot()
-			WebUI.click(findTestObject('Object Repository/Form/button_Submit'))
-			
-		}
-	
-		@Then("The required fields should show red borders")
-		def verifyRedBorderOnRequiredFields() {
-			// List required field objects
-			def requiredFields = [
-				'Object Repository/Form/input_firstName',
-				'Object Repository/Form/input_lastName',
-				'Object Repository/Form/input_userNumber'
-			]
-	
-			for (def fieldPath : requiredFields) {
-				def borderColor = WebUI.getCSSValue(findTestObject(fieldPath), 'border-color')
-				println("Border color of ${fieldPath}: ${borderColor}")
-	
-				// Validasi jika warna merah: #dc3545 = rgb(220, 53, 69)
-				assert borderColor == 'rgb(220, 53, 69)' : "Expected red border but got ${borderColor} on ${fieldPath}"
-				WebUI.takeScreenshot()
-			}
-	
-			WebUI.closeBrowser()
-		}
+
+	@Given("User navigates to the Practice Form page for negative tc")
+	def openForm() {
+		WebUI.openBrowser('')
+		WebUI.navigateToUrl('https://demoqa.com/automation-practice-form')
+		WebUI.maximizeWindow()
+		WebUI.scrollToElement(findTestObject('Object Repository/Form/input_firstName'), 10)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Form/input_firstName'), 10)
+		WebUI.takeScreenshot()
 	}
+
+	@When("User submits form with required fields empty")
+	def submitEmptyForm() {
+		WebUI.takeScreenshot()
+		WebUI.click(findTestObject('Object Repository/Form/button_Submit'))
+	}
+
+	@Then("The required fields should show red borders")
+	def verifyRedBorderOnRequiredFields() {
+		def requiredFields = [
+			'Object Repository/Form/input_firstName',
+			'Object Repository/Form/input_lastName',
+			'Object Repository/Form/input_userNumber'
+		]
+
+		for (def fieldPath : requiredFields) {
+			def borderColor = WebUI.getCSSValue(findTestObject(fieldPath), 'border-color')
+			println("Border color of ${fieldPath}: ${borderColor}")
+
+			assert borderColor == 'rgb(220, 53, 69)' : "Expected red border but got ${borderColor} on ${fieldPath}"
+			WebUI.takeScreenshot()
+		}
+
+		WebUI.closeBrowser()
+	}
+}
