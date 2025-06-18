@@ -6,13 +6,11 @@
    <elementGuidId>858dfcd7-fb53-4fa1-b1f5-810b911fe4eb</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//input[@id='gender-radio-${index}']/following-sibling::label</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@id='gender-radio-1']/following-sibling::label
-</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

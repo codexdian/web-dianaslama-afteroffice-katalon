@@ -6,13 +6,12 @@
    <elementGuidId>c6188f39-1a0d-4966-82e9-374ad47e1b45</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//div[contains(@id, 'react-select') and normalize-space(text())='NCR']
+</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[contains(@id, 'react-select') and text()='NCR']
-</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -6,13 +6,12 @@
    <elementGuidId>0b69c015-ea3a-4e58-bf7a-b81b527dc282</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//label[text()='${hobby}']
+</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//label[text()='Music']
-</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
